@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="monthlyPage" prefHeight="590.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="houseexpense.MonthlyReportController">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Monthly Report" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Calibri Bold" size="42.0" />
+         </font>
+      </Label>
+      <Separator layoutX="50.0" layoutY="111.0" prefHeight="0.0" prefWidth="618.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="111.0" />
+      <ScrollPane fx:id="scroller" hbarPolicy="NEVER" layoutX="90.0" layoutY="136.0" prefHeight="313.0" prefWidth="353.0">
+         <content>
+            <Accordion fx:id="accor" prefHeight="173.0" prefWidth="334.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="435.0" layoutY="482.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="67.0" prefWidth="122.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/backImg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="304.0" layoutY="482.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="122.0" text="Save">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/saveImg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

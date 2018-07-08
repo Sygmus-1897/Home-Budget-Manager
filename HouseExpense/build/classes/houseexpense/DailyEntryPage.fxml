@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="entryPage" prefHeight="640.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="houseexpense.DailyEntryPageController">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Daily Item Entry" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Calibri" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLbl" layoutX="50.0" layoutY="118.0" prefHeight="28.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="50.0" layoutY="105.0" prefHeight="0.0" prefWidth="560.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="105.0" />
+      <Separator layoutX="50.0" layoutY="158.0" prefHeight="3.0" prefWidth="416.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="158.0" />
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" layoutX="125.0" layoutY="199.0" prefHeight="279.0" prefWidth="616.0" AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="199.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ScrollPane>
+      <Button fx:id="addBtn" ellipsisString="" layoutX="59.0" layoutY="199.0" mnemonicParsing="false" onAction="#addContent" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 30;" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="199.0">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/addImg.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="submitBtn" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="208.0" layoutY="513.0" mnemonicParsing="false" onAction="#getData" prefHeight="85.0" prefWidth="132.0" text="Submit" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="208.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/submitImg.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="224.0" layoutY="174.0" text="Category" AnchorPane.leftAnchor="224.0" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="174.0" text="Item" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="513.0" layoutY="174.0" text="Qty" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="174.0" text="Amt" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitBtn1" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="408.0" layoutY="513.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="85.0" prefWidth="132.0" text="Back" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="340.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/backImg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="postEntryCheck" layoutX="461.0" layoutY="119.0" mnemonicParsing="false" text="Post Entry">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <DatePicker fx:id="datePicker" layoutX="598.0" layoutY="118.0" prefHeight="28.0" prefWidth="174.0" />
+      <Label layoutX="146.0" layoutY="174.0" text="New?">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

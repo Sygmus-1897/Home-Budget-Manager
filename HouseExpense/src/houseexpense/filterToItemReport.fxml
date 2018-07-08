@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="filterPage" prefHeight="589.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="houseexpense.FilterToItemReportController">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Make Report On Data">
+         <font>
+            <Font name="Calibri" size="42.0" />
+         </font>
+      </Label>
+      <Separator layoutX="56.0" layoutY="111.0" prefHeight="0.0" prefWidth="645.0" />
+      <Label layoutX="88.0" layoutY="150.0" text="From : ">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="334.0" layoutY="150.0" text="To :">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scroller" focusTraversable="false" hbarPolicy="NEVER" layoutX="88.0" layoutY="205.0" prefHeight="275.0" prefWidth="645.0">
+         <content>
+            <GridPane fx:id="optionsGrid" prefHeight="266.0" prefWidth="641.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button alignment="CENTER" layoutX="227.0" layoutY="492.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="73.0" prefWidth="180.0" text="Make Report">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/reportImg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="allOption" layoutX="691.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" text="All" />
+      <Button layoutX="421.0" layoutY="492.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="109.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/backImg.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <DatePicker fx:id="startDatePicker" layoutX="140.0" layoutY="148.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="stopDatePicker" layoutX="367.0" layoutY="148.0" />
+   </children>
+</AnchorPane>

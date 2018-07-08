@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="HouseExpense.jnlp">
+  <information>
+    <title>HouseExpense</title>
+    <vendor>Vivek Sharma</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="HouseExpense.jar" size="51135" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.23.1.jar" size="6733696" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="HouseExpense" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="houseexpense.HouseExpense"  name="HouseExpense" />
+  <update check="always"/>
+</jnlp>
